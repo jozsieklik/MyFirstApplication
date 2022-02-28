@@ -1,0 +1,70 @@
+body {
+    background-image: url(./img/bg.jpg);
+}
+/* Image part */
+.main {
+    background: none;
+    margin: 70px auto 10px;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    box-shadow: 0 0 20px #000;
+}
+
+.img-container {
+    width: 80%;
+    position: relative;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+.img-text {
+    width: 100%;
+    height: 100px;
+    background-color: hsla(0, 0%, 0%, 0.623);
+    position: absolute;
+    bottom: 0;   
+    color: #fff
+}
+.img-text h3,p {
+    margin: 10px;
+}
+
+.arrow {
+    width: 10%;
+    background-color: #ccc;
+    text-align: center;
+    box-shadow: inset 0 0 25px #000;
+}
+.arrow:hover {
+    box-shadow: inset 0 0 25px #fff;
+}
+
+.arrow button {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4em;
+    margin-top: 210px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    border: none;
+    background: none;
+}
+
+/* Thumbnail part */
+
+.thumbnails {
+    margin: auto;
+    width: 75%;
+    height: 90px;   
+    display: flex;
+    justify-content: space-between;
+}
+.thumbnails div {
+    background-size: cover;
+    width: 120px;
+}
+.thumbnails img {
+    width: 100%;
+    height: 100%;
+}
