@@ -1,5 +1,6 @@
 body {
     background-image: url(./img/bg.jpg);
+    font-family: 'Exo', sans-serif;
 }
 /* Image part */
 .main {
@@ -42,7 +43,7 @@ body {
 }
 
 .arrow button {
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Syne Mono', monospace;
     font-size: 4em;
     margin-top: 210px;
     color: #fff;
@@ -58,13 +59,40 @@ body {
     width: 75%;
     height: 90px;   
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
+/*This is title of thumbnail picture. It shows after hovering */
+.hidden {
+    display: none;
+    position: absolute;
+    color: #fff;
+    background-color: hsla(0, 0%, 0%, 0.623);
+    padding: 5px 0;
+    top: 95px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+/*This will show hidden title after hovering*/
+.thumbnails div:hover .hidden{
+    display: block;
+}
+
 .thumbnails div {
     background-size: cover;
     width: 120px;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+}
+.thumbnails img:hover { 
+    box-shadow: 0 0 5px #fff;
 }
 .thumbnails img {
     width: 100%;
     height: 100%;
+}
+
+.choosen {
+    box-shadow: 0 0 20px #fff;
 }
