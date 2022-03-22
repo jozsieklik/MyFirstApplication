@@ -45,10 +45,10 @@ let img7 = {
 //this var is used to pull data from array
 let currentPhoto = 0;
 
-//array of objects
+//array of objects. value of currentPhoto is position in this array
 let images = [img1, img2, img3, img4, img5, img6, img7];
 
-//Show the first photo at start
+//Show the first photo at start. It showing data from array depending on currentPhoto value
 $("#photo").attr("src", images[currentPhoto].photo); //this sets the source of img
 $("#photo-title").text(images[currentPhoto].title);     //this sets title of img
 $("#photo-description").text(images[currentPhoto].description); //this sets description of img
@@ -87,6 +87,7 @@ images.forEach((item, index) => {
     //              (add html code)     (p contain the hidden tile of thumbnail, show at hovering)             (images-index is used to recognize which thumbnail was clicked to be able to show it)
     $("#thumbnailContainer").append(`<div><p class="hidden">${images[index].title}</p><img class="box box${index}"  images-index="${index}" src=${images[index].photo}></div>`);
     //                                                                      (index=currentPhoto - box(index) is used in arrow handling)
+    
     $(".box:first").addClass("choosen");    //add highlight to first thumbnail, which picture is showed
 
     thumbnailClick();
